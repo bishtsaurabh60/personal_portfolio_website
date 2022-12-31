@@ -1,30 +1,32 @@
-import { useContext, useRef, useState } from 'react';
+import { useContext, useRef, useState } from "react";
 import { IconContext } from "react-icons/lib";
-import { BsLinkedin, BsFillCheckCircleFill } from 'react-icons/bs';
-import { GoMarkGithub } from 'react-icons/go';
-import { GrTwitter } from 'react-icons/gr';
-import { RiSendPlaneFill } from 'react-icons/ri';
-import { UiContext } from '../../context';
+import { BsLinkedin, BsFillCheckCircleFill } from "react-icons/bs";
+import { GoMarkGithub } from "react-icons/go";
+import { GrTwitter } from "react-icons/gr";
+import { RiSendPlaneFill } from "react-icons/ri";
+import { UiContext } from "../../context";
 import emailjs from "@emailjs/browser";
-import { urlFor } from '../../client';
-import { useSanityFetch } from '../customHook/useSanityFetch';
+import { urlFor } from "../../client";
+import { useSanityFetch } from "../customHook/useSanityFetch";
 
 const Contact = () => {
-
   const formRef = useRef(null);
-  const { state: { darkMode },contactRef } = useContext(UiContext);
+  const {
+    state: { darkMode },
+    contactRef,
+  } = useContext(UiContext);
   const [done, setDone] = useState(false);
   const [details] = useSanityFetch('*[_type=="info"]');
   const [socialContacts] = useSanityFetch('*[_type=="socialContacts"]');
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-    .sendForm(
-      import.meta.env.VITE_EMAIL_SERVICE,
-      import.meta.env.VITE_EMAIL_TEMPLATE,
-      formRef.current,
-      import.meta.env.VITE_EMAIL_KEY
+      .sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE,
+        import.meta.env.VITE_EMAIL_TEMPLATE,
+        formRef.current,
+        import.meta.env.VITE_EMAIL_KEY
       )
       .then(
         (result) => {
@@ -35,7 +37,7 @@ const Contact = () => {
         (error) => {
           console.log(error.text);
         }
-    );
+      );
   };
   return (
     <section
@@ -49,17 +51,17 @@ const Contact = () => {
             <span className="text-amber-400">Project</span>
           </h1>
           {details?.map(({ icon, detail, hrefTo }, i) => (
-            <article key={i} className="w-fit">
+            <article key={i} className="w-full">
               <a
                 href={`${hrefTo}:${detail}`}
-                className="flex items-center justify-start gap-4 p-4"
+                className="flex items-center justify-start gap-4 p-3 bg-red-100/[0.3] rounded-xl m-1"
               >
                 <img
                   src={urlFor(icon)}
                   alt=""
                   className="h-8 w-8 drop-shadow-2xl"
                 />
-                <p className="text-md">{detail}</p>
+                <p className="text-sm">{detail}</p>
               </a>
             </article>
           ))}
@@ -144,7 +146,7 @@ const Contact = () => {
               <article className="flex items-center gap-4">
                 <button
                   type="submit"
-                  className="group flex h-12 w-52 items-center justify-center gap-2 rounded-[2rem] bg-amber-400 text-lg font-medium shadow-2xl drop-shadow-2xl transition-all hover:bg-amber-500 active:translate-y-1"
+                  className="group flex h-12 w-52 items-center justify-center gap-2 rounded-[2rem] bg-amber-400 text-lg font-medium shadow-2xl drop-shadow-2xl transition-all hover:bg-amber-400 active:translate-y-1"
                 >
                   <span>Send Message</span>
                   <RiSendPlaneFill className="h-6 w-6 transition-all duration-500 group-hover:rotate-45" />

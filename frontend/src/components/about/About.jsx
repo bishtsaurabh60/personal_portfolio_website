@@ -1,9 +1,9 @@
-import {useContext } from 'react';
+import { useContext } from "react";
 import { UiContext } from "../../context";
-import { IconContext } from 'react-icons/lib';
-import { BsFileEarmarkRichtext } from 'react-icons/bs';
-import { urlFor } from '../../client';
-import { useSanityFetch } from '../customHook/useSanityFetch';
+import { IconContext } from "react-icons/lib";
+import { BsFileEarmarkRichtext } from "react-icons/bs";
+import { urlFor } from "../../client";
+import { useSanityFetch } from "../customHook/useSanityFetch";
 
 const About = () => {
   const { aboutRef } = useContext(UiContext);
@@ -39,7 +39,7 @@ const About = () => {
         <p className="text-justify mx-12 py-3">
           {aboutMySelf && aboutMySelf[0].aboutMe}
         </p>
-        <button className="inline-flex justify-center items-center w-60 mt-2 mb-10 md:mb-0 text-xl font-semibold h-14 bg-amber-400 drop-shadow-2xl rounded-full hover:scale-110 hover:bg-amber-500 active:translate-y-[6px] transition-all">
+        <button className="inline-flex justify-center items-center w-60 mt-2 mb-10 md:mb-0 text-xl font-semibold h-14 bg-amber-400 drop-shadow-2xl rounded-full hover:scale-110 hover:bg-amber-400 active:translate-y-[6px] transition-all">
           <a
             href={aboutMySelf && aboutMySelf[0].resume}
             download

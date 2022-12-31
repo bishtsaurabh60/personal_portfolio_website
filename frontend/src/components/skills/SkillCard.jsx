@@ -1,4 +1,4 @@
-const SkillCard = ({stack,skills,isAnimate}) => {
+const SkillCard = ({ stack, skills, isAnimate }) => {
   return (
     <article className="w-full flex-1 flex place-items-center flex-col">
       <article className="rounded-br-[2rem] rounded-tl-[2rem] border-r-[1.5rem] border-l-[1.5rem] border-amber-400 w-4/5 flex mb-4 flex-col justify-center items-center pt-2 customBoxShadow drop-shadow-2x">
@@ -7,7 +7,7 @@ const SkillCard = ({stack,skills,isAnimate}) => {
         </h1>
         <section className="w-4/5 rounded-[30px] p-4">
           <article className="">
-            {stack?.map(({ skill, expertise },i) => (
+            {stack?.map(({ skill, expertise }, i) => (
               <div className="py-1" key={skill + i}>
                 <article className="m-0">
                   <span className="text-1xl font-[500] my-5">{skill}</span>
@@ -52,5 +52,5 @@ const SkillCard = ({stack,skills,isAnimate}) => {
       </article>
     </article>
   );
-}
+};
 export default SkillCard;

@@ -1,6 +1,6 @@
-import TypingEffect from '../features/TypingEffect';
-import { urlFor } from '../../client';
-import { useSanityFetch } from '../customHook/useSanityFetch';
+import TypingEffect from "../features/TypingEffect";
+import { urlFor } from "../../client";
+import { useSanityFetch } from "../customHook/useSanityFetch";
 
 const Intro = () => {
   const [profile] = useSanityFetch(
@@ -44,5 +44,5 @@ const Intro = () => {
       </article>
     </section>
   );
-}
+};
 export default Intro;

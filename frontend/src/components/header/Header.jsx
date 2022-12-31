@@ -35,7 +35,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", changeNavBg);
   }, []);
 
-
   const showColorSm = () =>
     showColor
       ? state.darkMode
