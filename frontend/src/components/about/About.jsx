@@ -39,19 +39,18 @@ const About = () => {
         <p className="text-justify mx-12 py-3">
           {aboutMySelf && aboutMySelf[0].aboutMe}
         </p>
-        <button className="inline-flex justify-center items-center w-60 mt-2 mb-10 md:mb-0 text-xl font-semibold h-14 bg-amber-400 drop-shadow-2xl rounded-full hover:scale-110 hover:bg-amber-400 active:translate-y-[6px] transition-all">
-          <a
-            href={aboutMySelf && aboutMySelf[0].resume}
-            download
-            target="_blank"
-            className="inline-flex items-center gap-2 drop-shadow-lg"
-          >
-            <span>Download CV</span>
+        <a
+          href={aboutMySelf && aboutMySelf[0].resume}
+          target="_blank"
+          className="inline-flex items-center gap-2 drop-shadow-lg"
+        >
+          <button className="inline-flex justify-center items-center w-[17rem] mt-2 mb-10 md:mb-0 text-xl font-semibold h-14 bg-amber-400 drop-shadow-2xl rounded-full hover:scale-110 hover:bg-amber-400 active:translate-y-[6px] transition-all">
+            <span>Download Resume</span>
             <IconContext.Provider value={{}}>
               <BsFileEarmarkRichtext />
             </IconContext.Provider>
-          </a>
-        </button>
+          </button>
+        </a>
       </article>
     </section>
   );
