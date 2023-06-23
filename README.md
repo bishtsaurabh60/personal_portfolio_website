@@ -8,7 +8,7 @@ REACT JS, TAILWIND CSS, EMAIL JS AND SANITY.IO
 
 ## Demo
 
-### Check out the [Live Demo](https://basic-calculator-bisht60.netlify.app/)
+### Check out the [Live Demo](https://saurabh-bisht60-portfolio.netlify.app/)
 
 ## Getting Started with VITE
 
