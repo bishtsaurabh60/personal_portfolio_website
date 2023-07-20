@@ -10,7 +10,7 @@ const Services = () => {
     <section
       id="services"
       ref={servicesRef}
-      className="flex place-items-center h-full flex-col md:flex-row cursor-pointer my-[10rem]"
+      className="flex place-items-center h-full flex-col md:flex-row cursor-pointer my-[5rem] lg:my-[10rem]"
     >
       <article className="flex-1 flex justify-center items-center flex-col">
         <h1 className="font-bold text-6xl mb-6 drop-shadow-lg tracking-wide">

@@ -83,14 +83,14 @@ const Header = () => {
                   : "bg-[#fff]/[0.6]"
               }
               
-              md:bg-transparent
+               md:bg-transparent
                absolute w-full translate-y-[20%] left-0 md:flex drop-shadow-lg md:translate-y-0 md:static -top-[0.55rem] text-center group`}
             >
               {navi.map(({ link, scroll }, i) => (
                 <li
                   onClick={(e) => {
                     scrollOnClick(scroll);
-                    setMenu(!menu);
+                    setMenu(false);
                   }}
                   key={i}
                   className={`ml-3 p-1 m-1 underline-offset-8 decoration-4 hover:underline hover:text-amber-400 cursor-pointer`}

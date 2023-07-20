@@ -14,12 +14,12 @@ const About = () => {
     <section
       id="about"
       ref={aboutRef}
-      className="flex justify-center items-center h-full my-[9rem] flex-col md:flex-row text-center"
+      className="flex justify-center items-center h-full my-[5rem] lg:my-[9rem] flex-col md:flex-row text-center"
     >
       <article className="flex-1 relative flex justify-center items-center w-full h-full mb-8 ">
-        <article className="hidden absolute top-12 left-12 w-3/4 h-[30vh] rounded-[30px] overflow-hidden md:h-[70vh] bg-amber-400 md:flex shadow-2xl"></article>
+        <article className="hidden absolute top-12 left-12 w-3/4 md:w-[94%] lg:w-3/4 h-[30vh] rounded-[30px] overflow-hidden md:h-[40vh] lg:h-[70vh] bg-amber-400 md:flex shadow-2xl"></article>
 
-        <article className="w-3/4 h-[30vh] rounded-[30px] overflow-hidden relative md:h-[70vh] shadow-2xl">
+        <article className="w-3/4 md:w-[95%] lg:w-3/4 h-[30vh] rounded-[30px] left-2 overflow-hidden relative md:h-[40vh] lg:h-[70vh] shadow-2xl">
           <img
             src={aboutMySelf && urlFor(aboutMySelf[0].image)}
             alt="aboutImg"

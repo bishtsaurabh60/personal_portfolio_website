@@ -18,6 +18,9 @@ This project was bootstrapped with [VITE](https://v3.vitejs.dev/).
 
 In the project directory, you can run:
 
+To install Dependency...
+### `npm install`
+
 ### `npm run dev`
 
 Runs the app in the development mode.\

@@ -15,7 +15,7 @@ const Work = () => {
     <section
       ref={workRef}
       id="work"
-      className="flex flex-col justify-center w-full"
+      className="flex flex-col justify-center w-full gap-4"
     >
       <h1 className="text-6xl font-bold text-center">
         My <span className="text-amber-400">Work</span>

@@ -40,10 +40,10 @@ const Skills = () => {
       ref={skillsRef}
       className="flex flex-col justify-center"
     >
-      <h1 className="self-center font-bold text-6xl mb-2 drop-shadow-lg tracking-wide">
+      <h1 className="self-center font-bold text-6xl mb-10 md:mb-14 lg:mb-12 drop-shadow-lg tracking-wide">
         Skills
       </h1>
-      <article className="flex place-items-center flex-col lg:flex-row">
+      <article className="flex place-items-center flex-col lg:flex-row gap-8 lg:gap-0">
         <SkillCard stack={frontEnd} skills="Frontend" isAnimate={isAnimate} />
         <SkillCard stack={backEnd} skills="Backend" isAnimate={isAnimate} />
       </article>

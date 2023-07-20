@@ -7,7 +7,10 @@ const Intro = () => {
     '*[_type=="profile"] | order(_createdAt desc)'
   );
   return (
-    <section id="intro" className="flex flex-col md:flex-row h-screen">
+    <section
+      id="intro"
+      className="flex flex-col md:flex-row h-screen md:h-full md:mt-12 lg:h-screen lg:mt-5"
+    >
       <article
         id="bio"
         className="flex-1 translate-y-8 self-center md:translate-y-0"
@@ -38,7 +41,7 @@ const Intro = () => {
           className="w-full h-full object-cover object-top absolute"
           loading="lazy"
         />
-        <p className="backdrop-opacity-95 backdrop-brightness-90 bg-black/30 drop-shadow-lg font-normal w-5/6 m-2 p-2 absolute top-1/2 text-white right-0 md:hidden">
+        <p className="backdrop-opacity-95 backdrop-brightness-90 bg-black/30 drop-shadow-lg font-normal w-5/6 m-2 p-2 absolute top-1/2 text-white right-0 md:hidden rounded-2xl">
           {profile && profile[0].description}
         </p>
       </article>
